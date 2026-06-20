@@ -1,4 +1,5 @@
 # Program to print a full pyramid pattern
+# changing 
 
 # Get the number of rows from the user
 rows = int(input("Enter number of rows: "))
