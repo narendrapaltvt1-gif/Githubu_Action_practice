@@ -1,0 +1,27 @@
+#Workflow
+name: CICD
+on:
+  
+
+jobs:
+  code:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "Copy Code"
+
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "build Code"
+  testing:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "test Code"
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "deploy Code"
