@@ -1,0 +1,29 @@
+name: CICD 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the Code
+        run: echo "Cloning the Code"
+  build:
+    needs: [code]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "build Code"
+  testing:
+    needs: [build]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "test Code"
+  deploy:
+    needs: [build,testing]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clone code
+        run: echo "deploy Code"
